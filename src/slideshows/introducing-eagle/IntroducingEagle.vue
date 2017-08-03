@@ -70,7 +70,7 @@
             img(src='./assets/functional area.png' width='665px' height='600px')
         eg-transition(enter='bounceInLeft' leave='bounceOutLeft')
           p(v-if="step >= 4")
-            |<b>关联、比重、次数、趋势、轨迹</b>
+            | 关联、比重、次数、趋势、轨迹
         eg-transition(enter='bounceInRight' leave='bounceOutRight')
           p(v-if="step >= 5")
             | 适当的场景、适当的制图
@@ -93,6 +93,39 @@
           7. 轨道站点日均<b>客流量</b>分布矩阵树图
           8. 各功能区轨道线路<b>流量极差</b>分布气泡图
           9. 轨道线路<b>客流OD</b>分布桑基图
+
+    //- slide(:steps=1, leave='fadeOut')
+    //-   eg-transition(enter='flipInX')
+    //-     h3 这里放图的类型，即上面说的九种方式如何选图。一个一个放出来
+
+    //-   eg-transition(enter='flipInX')
+    //-     p 注意特效和出入方式
+
+    //-   eg-transition(enter='flipInX')
+    //-     eg-code-block(lang='html').
+    //-       1. 在基于类别的情况下，什么情况下用什么图
+
+    //- slide(:steps=1, leave='fadeOut')
+    //-   eg-transition(enter='flipInX')
+    //-     h3 接上面，这张讲基于时间维度的画图方式，有那些图要做。
+
+    //-   eg-transition(enter='flipInX')
+    //-     p 分成两张ppt写出关键词为时间的图可以有哪些选项，什么情况下用什么图
+
+    //-   eg-transition(enter='flipInX')
+    //-     eg-code-block(lang='html').
+    //-       1. 在基于时间的情况下什么情况下用什么图
+
+    //- slide(:steps=1, leave='fadeOut')
+    //-   eg-transition(enter='flipInX')
+    //-     h3 接上面，这张讲基于空间维度的画图方式，有那些图要做。
+
+    //-   eg-transition(enter='flipInX')
+    //-     p 分成两张ppt写出关键词为空间的图可以有哪些选项，什么情况下用什么图
+
+    //-   eg-transition(enter='flipInX')
+    //-     eg-code-block(lang='html').
+    //-       1. 在基于空间的情况下什么情况下用什么图
 
     slide.boredYet(enter='fadeIn', :mouseNavigation='false', :keyboardNavigation='false')
       h3 Bored yet ?
