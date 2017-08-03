@@ -75,26 +75,24 @@
           p(v-if="step >= 5")
             | 适当的场景、适当的制图
 
-    slide(:steps=4, leave='fadeOut')
+    slide(:steps=1, leave='fadeOut')
       eg-transition(enter='flipInX')
-        h3 Show me the codey !!!
+        h3 城市轨道交通网络客流分析可视化
 
       eg-transition(enter='flipInX')
-        p Here is how you slideshow with Eagle.js:
+        p 基于三个维度：类别、时间、空间
 
       eg-transition(enter='flipInX')
         eg-code-block(lang='html').
-          .eg-slideshow
-
-            slide <eg-code-comment :active='step === 2' enter='flipInY'> EAGLE SLIDE TAG</eg-code-comment>
-              h1 EagleJS <eg-code-comment :active='step === 3' enter='flipInY'> SIMPLIFIED HTML (PUG)</eg-code-comment>
-              img(src='logo.png')
-
-            slide(enter='slideInLeft', :steps=4)
-              h3 EagleJS is the greatest slideshow framework
-              p(v-if="step >= 2") The best !  <eg-code-comment :active='step === 4' enter='flipInY'> BULLET POINT WITH V-IF</eg-code-comment>
-              p(v-if="step >= 3") All others are failed frameworks.
-              p(v-if="step >= 4") Not even real frameworks. Fake !
+          1. 各行政区轨道进客站客流总量<b>排行榜</b>
+          2. 各轨道线路日均进站量及日均客运量<b>排名</b>
+          3. 轨道站点高峰小时内进站客流变化<b>趋势</b>折线图
+          4. 轨道典型站点客流进/出站<b>流量</b>金字塔图/漏斗图
+          5. 轨道站点日均客运量<b>比重</b>分布南丁格尔玫瑰图
+          6. 轨道站点<b>流量流向</b>分布和弦图
+          7. 轨道站点日均<b>客流量</b>分布矩阵树图
+          8. 各功能区轨道线路<b>流量极差</b>分布气泡图
+          9. 轨道线路<b>客流OD</b>分布桑基图
 
     slide.boredYet(enter='fadeIn', :mouseNavigation='false', :keyboardNavigation='false')
       h3 Bored yet ?
