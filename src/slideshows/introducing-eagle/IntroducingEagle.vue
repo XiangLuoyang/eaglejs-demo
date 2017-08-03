@@ -3,9 +3,9 @@
   .eg-slideshow
     slide(enter='fadeIn' leave='bounceOutLeft')
       .center.frontpage
-        h1 Eagle.js
-        img(src='./assets/logo.svg')
-        h4 A Slideshow Framework for Vue.js
+        h1 VISUALIZATION TECHNOLOGY
+        img(src='./assets/fm.png')
+        h4 FOR PASENGERS OF URBAN RAIL TRANSIT
         eg-triggered-message(:trigger='slideTimer >= 2',
                             :duration='6', position='top right',
                             enter='bounceInRight', leave='bounceOutRight')
@@ -14,48 +14,34 @@
           p Previous:
           img.control-schema(src='./assets/controlsPrev.svg')
 
-    slide(:steps=4, enter='bounceInRight' leave='bounceOutDown')
+    slide(:steps=5, enter='bounceInRight' leave='bounceOutDown')
       h3
-        | Vue
+        | 提纲
         .inline(class='animated infinite pulse heart')
-        | slideshows
-      .center
-        eg-transition(enter='bounceInLeft' leave='bounceOutLeft')
-          p(v-if="step >= 2")
-            <b>Vue.js</b> is one of the coolest frontend frameworks out there
-        eg-transition(enter='bounceInRight' leave='bounceOutRight')
-          p(v-if="step >= 3")
-            <b>Vue.js</b> supports components and transitions out of the box
-        eg-transition(enter='bounceInLeft' leave='bounceOutLeft')
-          p(v-if="step >= 4")
-            <b>Eagle.js</b> adds navigation logics, scalable components, etc.
-
-    slide(:steps=6, enter='bounceInDown')
-      h3 What's in it for you
-
+        | Outlines
       eg-transition(enter='fadeIn' leave='fadeOut')
         .quarter(v-if='step >=2')
-          img(src='./assets/icons/basic_paperplane.svg')
-          h4 EASE OF USE
-          p Clear syntax, live preview
+          img(src='./assets/icons/tongji.svg')
+          h4 客流统计
+          p Passenger flow estimation
 
       eg-transition(enter='fadeIn' leave='fadeOut')
         .quarter(v-if='step >=3')
-          img(src='./assets/icons/basic_share.svg')
-          h4 MODULARITY
-          p Reuse slides and styles
+          img(src='./assets/icons/guiji.svg')
+          h4 移动轨迹
+          p Moving trajectory
 
       eg-transition(enter='fadeIn' leave='fadeOut')
         .quarter(v-if="step >= 4")
-         img(src='./assets/icons/basic_mixer2.svg')
-         h4 INTERACTIVITY
-         p Embed forms and live demos
+         img(src='./assets/icons/tezheng.svg')
+         h4 出行特征
+         p Trip characteristics
 
       eg-transition(enter='fadeIn' leave='fadeOut')
         .quarter(v-if="step >= 5")
-          img(src='./assets/icons/basic_display.svg')
-          h4 PORTABILITY
-          p Play in any browser
+          img(src='./assets/icons/leibie.svg')
+          h4 类别
+          p Category
 
       eg-transition(enter='fadeIn' leave='fadeOut')
         eg-modal(v-if='step >= 6')
@@ -64,6 +50,30 @@
             img(:src="preloadedImages['youRightNow']",
                 :style="{height: '10em'}")
 
+
+    slide(:steps=5, enter='bounceInDown')
+      h3 前情提要
+
+      .center
+        eg-transition(enter='bounceInLeft' leave='bounceOutLeft')
+          p(v-if="step >= 2")
+            | 基于
+            img(src='./assets/icons/shijian.svg' width='40px' height='40px')
+            |、
+            img(src='./assets/icons/kongjian.svg' width='50px' height='50px')
+            |、
+            img(src='./assets/icons/gongneng.svg' width='50px' height='50px')
+            | 对数据做分析
+        eg-transition(enter='bounceInRight' leave='bounceOutRight')
+          p(v-if="step >= 3")
+            | 将有一定 <b> 服务功能 </b> 的功能区分为以下八种
+            img(src='./assets/functional area.png' width='665px' height='600px')
+        eg-transition(enter='bounceInLeft' leave='bounceOutLeft')
+          p(v-if="step >= 4")
+            |<b>关联、比重、次数、趋势、轨迹</b>
+        eg-transition(enter='bounceInRight' leave='bounceOutRight')
+          p(v-if="step >= 5")
+            | 适当的场景、适当的制图
 
     slide(:steps=4, leave='fadeOut')
       eg-transition(enter='flipInX')
