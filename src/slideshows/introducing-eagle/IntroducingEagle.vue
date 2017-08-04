@@ -52,7 +52,7 @@
 
 
     slide(:steps=5, enter='bounceInDown')
-      h3 前情提要
+      h3 如何描述
 
       .center
         eg-transition(enter='bounceInLeft' leave='bounceOutLeft')
@@ -63,17 +63,17 @@
             img(src='./assets/icons/kongjian.svg' width='50px' height='50px')
             | |
             img(src='./assets/icons/gongneng.svg' width='50px' height='50px')
-            | 对数据做分析
+            | 三个维度对数据进行描述
         eg-transition(enter='bounceInRight' leave='bounceOutRight')
           p(v-if="step >= 3")
             | 将有一定 <b> 服务功能 </b> 的功能区分为以下八种
             img(src='./assets/functional area.png' width='665px' height='600px')
         eg-transition(enter='bounceInLeft' leave='bounceOutLeft')
           p(v-if="step >= 4")
-            | 关联、比重、次数、趋势、轨迹
+            | 依据 关联、比重、次数、趋势、轨迹等关键词进行描述
         eg-transition(enter='bounceInRight' leave='bounceOutRight')
           p(v-if="step >= 5")
-            | 适当的场景、适当的制图
+            | 过程 = (正确的描述) => 合理的制图
 
     //- slide(:steps=1, leave='fadeOut')
     //-   eg-transition(enter='flipInX')

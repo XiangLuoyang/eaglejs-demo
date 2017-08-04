@@ -4,14 +4,13 @@ eg-transition(:enter='enter', :leave='leave')
     .eg-slide-content
       h3(v-if='step <= 2') 移动轨迹可视化
       h4(v-if='(step >=3)&&(step <=5)') 直接可视化
-      h4(v-if='(step >=6)&&(step <=9)') 聚集可视化
-      h4(v-if='step >=10') 特征可视化
-      //- h3(v-else) Slideception !!
+      h4(v-if='(step >=6)&&(step <=15)') 聚集可视化
+      h4(v-if='step >=15') 特征可视化
       eg-transition(leave='bounceOutLeft')
         .subslide(v-if='step <= 2')
           p.
           .center
-            |基于三种方式：直接可视化、聚集可视化、特征可视化(这句话的生命周期适当延长)
+            |基于三种方式：直接可视化、聚集可视化、特征可视化
           br
           br
           eg-code-block(lang='html', v-if="step === 2").
@@ -25,20 +24,28 @@ eg-transition(:enter='enter', :leave='leave')
       eg-transition(enter='bounceInRight')
         .subslide(v-if='(step >= 3) && (step < 15)')
           p(v-if='(3 <= step) && (step < 6)')
-             | 这里插入图片
-             span(v-if='(4 <= step) && (step < 6)') &nbsp; 就一张直接可视化的图
+             | 直接可视化
+             span(v-if='(4 <= step) && (step < 6)') &nbsp; 就很直接
           img(v-if='step === 5',src='./assets/zhijiekeshihua.png')
 
           p(v-if='(6 <= step) && (step < 9)')
              | 这里可以让DP出场，介绍聚集可视化的概念和图片
+          p(v-if='(9 <= step) && (step <= 15)')
+             | DP持续讲课时间
+
+          eg-transition(enter='lightSpeedIn')
+            #awesome-slideshow.embedded-slideshow-container(v-if='step >= 6')
+              vtfpourt4xEmbedded(:embedded='true', :username='username',
+                                         :preference='preference')
 
           eg-transition(enter='slideInUp')
-            p(v-if='(11 < step)  && (step <= 13)').
-              这里可以放入特征可视化的类型、典型案例，图等
+            p(v-if='(11 < step)  && (step <= 15)').
+              把上面那些兔子啊什么的换成雷达图什么的谢谢
+
 </template>
 
 <script>
-import AwesomeEmbeddedSlideshow from './AwesomeEmbeddedSlideshow'
+import Vtfpourt4xEmbedded from './Vtfpourt4xEmbedded'
 import eagle from 'eagle.js'
 export default {
   props: {
@@ -47,7 +54,7 @@ export default {
     preference: {default: 'baby bunnies'}
   },
   components: {
-    'awesome-embedded-slideshow': AwesomeEmbeddedSlideshow
+    'vtfpourt4xEmbedded': Vtfpourt4xEmbedded
   },
   mixins: [eagle.slide]
 }
