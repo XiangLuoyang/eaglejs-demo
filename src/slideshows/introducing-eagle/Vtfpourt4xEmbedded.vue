@@ -151,29 +151,3 @@ export default {
 
 }
 </style>
-
-I dont want to blow your mind, but right now,
-your are in an inserted slideshow
-
-Slideception !
-
-So yeah, inserted slideshows, crazy right...
-
-oh wait...
->bouncing in
-Hi there Tracy. Seen any sweet Fluppy puppy lately ?
-
->Omg is that a slideshow embedded in a slideshow
-deadpool: Oh im sorry, didn't mean to impress you
-
-dp: Let me make it right with some of your favorite animals.
-
-Oh yeah, oh oh, yeah
-
-
-dp It's just a slideshow embedded in a slideshow embedded in an inserted slideshow
- But I really wouldn't want to blow your mind.
-
-> Woooooow its
-
-dp: So here is me

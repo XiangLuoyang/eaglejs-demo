@@ -19,8 +19,7 @@ eg-transition(:enter='enter', :leave='leave')
             3. 讨论一下在不同的环境和条件下选用什么样的图
 
           eg-transition(enter='fadeIn')
-            p(v-if='step === 2').
-              直接可视化的介绍可以一笔带过，最多配合一张描绘上轨迹的地图
+            img(v-if='step === 2',src='./assets/guijikeshihua.png' style='margin-left:150px')
       eg-transition(enter='bounceInRight')
         .subslide(v-if='(step >= 3) && (step < 15)')
           p(v-if='(3 <= step) && (step < 6)')
