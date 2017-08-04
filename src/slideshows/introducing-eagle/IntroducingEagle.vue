@@ -75,104 +75,150 @@
           p(v-if="step >= 5")
             | 适当的场景、适当的制图
 
-    slide(:steps=1, leave='fadeOut')
-      eg-transition(enter='flipInX')
-        h3 城市轨道交通网络客流分析可视化
+    //- slide(:steps=1, leave='fadeOut')
+    //-   eg-transition(enter='flipInX')
+    //-     h3 城市轨道交通网络客流分析可视化
 
-      eg-transition(enter='flipInX')
-      .center
-        p 基于三个维度：类别、时间、空间
+    //-   eg-transition(enter='flipInX')
+    //-   .center
+    //-     p 基于三个维度：类别、时间、空间
 
-      eg-transition(enter='flipInX')
-        eg-code-block(lang='html').
-          1. 轨道站点高峰小时内进站客流变化<b>趋势</b>折线图
-          2. 轨道典型站点客流进/出站<b>流量</b>金字塔图/漏斗图
-          3. 轨道站点日均客运量<b>比重</b>分布南丁格尔玫瑰图
-          4. 轨道站点<b>流量流向</b>分布和弦图
-          5. 各轨道线路日均进站量及日均客运量<b>排名</b>
-          6. 轨道线路<b>客流OD</b>分布桑基图
-          7. 轨道站点日均<b>客流量</b>分布矩阵树图
-          8. 各行政区轨道进客站客流总量<b>排行榜</b>
-          9. 各功能区轨道线路<b>流量极差</b>分布气泡图
+    //-   eg-transition(enter='flipInX')
+    //-     eg-code-block(lang='html').
+    //-       1. 轨道站点高峰小时内进站客流变化<b>趋势</b>折线图
+    //-       2. 轨道典型站点客流进/出站<b>流量</b>金字塔图/漏斗图
+    //-       3. 轨道站点日均客运量<b>比重</b>分布南丁格尔玫瑰图
+    //-       4. 轨道站点<b>流量流向</b>分布和弦图
+    //-       5. 各轨道线路日均进站量及日均客运量<b>排名</b>条状图
+    //-       6. 轨道线路<b>客流OD</b>分布桑基图
+    //-       7. 轨道站点日均<b>客流量</b>分布矩阵树图
+    //-       8. 各行政区轨道进客站客流总量<b>排行榜</b>条状图
+    //-       9. 各功能区轨道线路<b>流量极差</b>分布气泡图
 
-    slide(:steps=1, leave='fadeOut')
-      eg-transition(enter='flipInX')
-        h3 这里放图的类型，即上面说的九种方式如何选图。一个一个放出来
+    //- slide(:steps=1, leave='fadeOut')
+    //-   eg-transition(enter='flipInX')
+    //-     h3 这里放图的类型，即上面说的九种方式如何选图。一个一个放出来
 
-      eg-transition(enter='flipInX')
-        p 注意特效和出入方式
+    //-   eg-transition(enter='flipInX')
+    //-     p 注意特效和出入方式
 
-      eg-transition(enter='flipInX')
-        eg-code-block(lang='html').
-          1. 在基于类别的情况下，什么情况下用什么图
+    //-   eg-transition(enter='flipInX')
+    //-     eg-code-block(lang='html').
+    //-       1. 在基于类别的情况下，什么情况下用什么图
 
-    slide(:steps=1, leave='fadeOut')
-      eg-transition(enter='flipInX')
-        h3 接上面，这张讲基于时间维度的画图方式，有那些图要做。
+    //- slide(:steps=1, leave='fadeOut')
+    //-   eg-transition(enter='flipInX')
+    //-     h3 接上面，这张讲基于时间维度的画图方式，有那些图要做。
 
-      eg-transition(enter='flipInX')
-        p 分成两张ppt写出关键词为时间的图可以有哪些选项，什么情况下用什么图
+    //-   eg-transition(enter='flipInX')
+    //-     p 分成两张ppt写出关键词为时间的图可以有哪些选项，什么情况下用什么图
 
-      eg-transition(enter='flipInX')
-        eg-code-block(lang='html').
-          1. 在基于时间的情况下什么情况下用什么图
+    //-   eg-transition(enter='flipInX')
+    //-     eg-code-block(lang='html').
+    //-       1. 在基于时间的情况下什么情况下用什么图
 
-    slide(:steps=1, leave='fadeOut')
-      eg-transition(enter='flipInX')
-        h3 接上面，这张讲基于空间维度的画图方式，有那些图要做。
+    //- slide(:steps=1, leave='fadeOut')
+    //-   eg-transition(enter='flipInX')
+    //-     h3 接上面，这张讲基于空间维度的画图方式，有那些图要做。
 
-      eg-transition(enter='flipInX')
-        p 分成两张ppt写出关键词为空间的图可以有哪些选项，什么情况下用什么图
+    //-   eg-transition(enter='flipInX')
+    //-     p 分成两张ppt写出关键词为空间的图可以有哪些选项，什么情况下用什么图
 
-      eg-transition(enter='flipInX')
-        eg-code-block(lang='html').
-          1. 在基于空间的情况下什么情况下用什么图
+    //-   eg-transition(enter='flipInX')
+    //-     eg-code-block(lang='html').
+    //-       1. 在基于空间的情况下什么情况下用什么图
 
-    slide.boredYet(enter='fadeIn', :mouseNavigation='false', :keyboardNavigation='false')
-      h3 Bored yet ?
-      .center
-        p What shall I call you ?
-        input.center(v-model='username')
-        p.
-          {{ username }}<span v-if='username.length'>,</span> I got you.
-          Tell me what you like, I'll skip the rest:
+    //- slide.boredYet(enter='fadeIn', :mouseNavigation='false', :keyboardNavigation='false')
+    //-   h3 Bored yet ?
+    //-   .center
+    //-     p What shall I call you ?
+    //-     input.center(v-model='username')
+    //-     p.
+    //-       {{ username }}<span v-if='username.length'>,</span> I got you.
+    //-       Tell me what you like, I'll skip the rest:
 
-        .inline(v-for='category, name in slideCategories')
-            eg-toggle(:key='name', v-model='category.show', :width='30',
-                      on-text='', off-text='', on-color='#ffeeaa',
-                      @change='changeMessage(category.changeMessage)')
-              p.label {{ category.name }}
-              eg-triggered-message(:trigger='!category.show',
-                                  :duration='3', position='top right',
-                                  enter='bounceInRight', leave='bounceOutRight')
-                p(v-html="message(category.name)")
+    //-     .inline(v-for='category, name in slideCategories')
+    //-         eg-toggle(:key='name', v-model='category.show', :width='30',
+    //-                   on-text='', off-text='', on-color='#ffeeaa',
+    //-                   @change='changeMessage(category.changeMessage)')
+    //-           p.label {{ category.name }}
+    //-           eg-triggered-message(:trigger='!category.show',
+    //-                               :duration='3', position='top right',
+    //-                               enter='bounceInRight', leave='bounceOutRight')
+    //-             p(v-html="message(category.name)")
 
-      .center
-        p What's your favourite ?
-        eg-radio.inline(v-for='pref in preferences', v-model="preference",
-                        :label="pref.label" )
-          p {{ pref.text}}
-          eg-triggered-message(:trigger='preference=== pref.label',
-                              :duration='3', position='top right',
-                              enter='bounceInRight', leave='bounceOutRight')
-                          p {{ message(pref.label) }}
+    //-   .center
+    //-     p What's your favourite ?
+    //-     eg-radio.inline(v-for='pref in preferences', v-model="preference",
+    //-                     :label="pref.label" )
+    //-       p {{ pref.text}}
+    //-       eg-triggered-message(:trigger='preference=== pref.label',
+    //-                           :duration='3', position='top right',
+    //-                           enter='bounceInRight', leave='bounceOutRight')
+    //-                       p {{ message(pref.label) }}
 
-      .button.prev(@click.stop='previousSlide')
-        span &lt; Prev. slide
-        br
-        span.small  Ctrl + left
-      .button.next(@click.stop='nextSlide')
-        span Next slide &gt;
-        br
-        span.small Ctrl + right
+    //-   .button.prev(@click.stop='previousSlide')
+    //-     span &lt; Prev. slide
+    //-     br
+    //-     span.small  Ctrl + left
+    //-   .button.next(@click.stop='nextSlide')
+    //-     span Next slide &gt;
+    //-     br
+    //-     span.small Ctrl + right
 
-    themes-slideshow(:skip="!slideCategories.themes.show", :inserted='true', firstSlide=3)
+    //- slide(:steps=1, leave='fadeOut')
+    //-   eg-transition(enter='flipInX')
+    //-     h3 标题：城市轨道交通客流移动轨迹可视化
 
+    //-   eg-transition(enter='flipInX')
+    //-     p 三种方式：直接可视化、聚集可视化、特征可视化
+
+    //-   eg-transition(enter='flipInX')
+    //-     eg-code-block(lang='html').
+    //-       1. 这一整章的内容说的都是之前提到的关键词之一：轨迹
+    //-       2. 关于移动轨迹可视化的方式有很多。我们先分情况讨论有哪些作图环境和条件
+    //-       3. 讨论一下在不同的环境和条件下选用什么样的图
+
+
+    //- slide(:steps=1, leave='fadeOut')
+    //-   eg-transition(enter='flipInX')
+    //-     h3 标题：城市轨道交通客流出行特征可视化
+
+    //-   eg-transition(enter='flipInX')
+    //-     p 客流出行特征的三个维度：时间、距离、次数
+
+    //-   eg-transition(enter='flipInX')
+    //-     eg-code-block(lang='html').
+    //-       1. 客流特征关联
+    //-       2. 平均出行次数
+    //-       3. 片区平均停留时间轴
+    //-       4. 平均出行距离频率分布
+    //-       5. 平均出行时间分布
+    //-       6. 房价空间
+
+    //- slide(:steps=1, leave='fadeOut')
+    //-   eg-transition(enter='flipInX')
+    //-     h3 标题：城市轨道交通客流类别可视化
+
+    //-   eg-transition(enter='flipInX')
+    //-     p 客流出行特征的三个大的方向和5个小的方向：正常出行；小众出行
+
+    //-   eg-transition(enter='flipInX')
+    //-     eg-code-block(lang='html').
+    //-       1. 客流类别比例分布
+    //-       2. 客流类别空间分布
+    //-       3. 通勤出行可视化
+    //-       4. 异常出行客流空间分布
+    //- themes-slideshow(:skip="!slideCategories.themes.show", :inserted='true', firstSlide=3)
+    vtfpourt3x(enter='flipInY', leave='hinge')
     awesome-inserted-slide(:username='username', :preference='preference',
                            enter='fadeIn', leave='hinge',
                            :skip="!slideCategories['slideReuse'].show")
 
-    figures-slide(enter='flipInY', leave='rollOut', :skip="['slideReuse', 'themes', 'interactivity'].some(function (e) {return slideCategories[e].show})")
+    //- figures-slide(enter='flipInY', leave='rollOut', :skip="['slideReuse', 'themes', 'interactivity'].some(function (e) {return slideCategories[e].show})")
+
+    //- 插入图表的ppt
+    figures-slide(:inserted='true')
 
     slide(enter='zoomIn', leave='fadeOut')
       h3 That's all folks !
@@ -201,6 +247,7 @@ export default {
     path: 'introducing-eagle'
   },
   components: {
+    'vtfpourt3x': require('./Vtfpourt3x'),
     'awesome-inserted-slide': require('./AwesomeInsertedSlide'),
     'figures-slide': require('./FiguresSlide'),
     'end-credits': require('./components/EndCredits'),

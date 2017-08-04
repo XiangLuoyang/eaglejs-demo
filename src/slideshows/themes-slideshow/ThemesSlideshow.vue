@@ -117,7 +117,7 @@ export default {
     @import url(https://fonts.googleapis.com/css?family=Pompiere);
     h3 {
       // letter-spacing: 1px;
-      font-family: 'Pompiere','微软雅黑';
+      font-family: 'Pompiere';
       text-transform: none;
       font-size: 3em;
       color: rgba(255, 255, 255, .6);
