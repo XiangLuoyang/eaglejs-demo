@@ -138,10 +138,10 @@
 
 
     //- themes-slideshow(:skip="!slideCategories.themes.show", :inserted='true', firstSlide=3)
-    vtfpourt3x(enter='flipInY', leave='hinge')
-    vtfpourt4x(enter='flipInY', leave='hinge')
-    vtfpourt5x(enter='flipInY', leave='hinge')
-    //- vtfpourt6x(enter='flipInY', leave='hinge')
+    vtfpourt3x(enter='flipInY', leave='flipOutY')
+    vtfpourt4x(enter='bounceInRight', leave='bounceOutRight')
+    vtfpourt5x(enter='flipInX', leave='flipOutX')
+    vtfpourt6x(enter='bounceInLeft', leave='bounceOutLeft')
     //- awesome-inserted-slide(:username='username', :preference='preference',
     //-                        enter='fadeIn', leave='hinge',
     //-                        :skip="!slideCategories['slideReuse'].show")

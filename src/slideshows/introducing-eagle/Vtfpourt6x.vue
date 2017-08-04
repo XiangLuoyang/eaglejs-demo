@@ -2,14 +2,15 @@
 eg-transition(:enter='enter', :leave='leave')
   .eg-slide(v-if='active')
     .eg-slide-content
-      h3(v-if='step < 12') 城市轨道交通客流类别可视化
+      h3(v-if='step < 12') 客流类别可视化
       h3(v-else) Slideception !!
       eg-transition(leave='bounceOutLeft')
         .subslide(v-if='step <= 2')
           p.
           .center
             |两个大的方向和5个小的方向：正常出行；小众出行
-
+          br
+          br
           eg-code-block(lang='html', v-if="step === 2").
             1. 客流类别比例分布
             2. 客流类别空间分布
@@ -27,10 +28,6 @@ eg-transition(:enter='enter', :leave='leave')
              span(v-if='(4 <= step) && (step < 6)') &nbsp; How is this slide <i>complex</i>?
           p(v-if='(6 <= step) && (step <= steps)') You: 还有什么图？
 
-          eg-transition(enter='lightSpeedIn')
-            #awesome-slideshow.embedded-slideshow-container(v-if='step >= 5')
-              awesome-embedded-slideshow(:embedded='true', :username='username',
-                                         :preference='preference')
           eg-transition(enter='slideInUp')
             p(v-if='(11 < step)  && (step <= 13)').
               If you lost track: you are watching a slideshow embedded

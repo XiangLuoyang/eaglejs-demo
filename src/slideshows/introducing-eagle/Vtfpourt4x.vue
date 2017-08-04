@@ -2,13 +2,16 @@
 eg-transition(:enter='enter', :leave='leave')
   .eg-slide(v-if='active')
     .eg-slide-content
-      h3(v-if='step < 12') 城市轨道交通客流移动轨迹可视化
-      h3(v-else) Slideception !!
+      h3(v-if='step <= 2') 移动轨迹可视化
+      h4(v-if='(step >=3)&&(step <=5)') 直接可视化
+      h4(v-if='(step >=6)&&(step <=9)') 聚集可视化
+      h4(v-if='step >=10') 特征可视化
+      //- h3(v-else) Slideception !!
       eg-transition(leave='bounceOutLeft')
         .subslide(v-if='step <= 2')
           p.
           .center
-            |基于三种方式：直接可视化、聚集可视化、特征可视化
+            |基于三种方式：直接可视化、聚集可视化、特征可视化(这句话的生命周期适当延长)
           br
           br
           eg-code-block(lang='html', v-if="step === 2").
@@ -20,17 +23,15 @@ eg-transition(:enter='enter', :leave='leave')
             p(v-if='step === 2').
               直接可视化的介绍可以一笔带过，最多配合一张描绘上轨迹的地图
       eg-transition(enter='bounceInRight')
-        .subslide(v-if='(step >= 4) && (step < 15)')
-
+        .subslide(v-if='(step >= 3) && (step < 15)')
           p(v-if='(3 <= step) && (step < 6)')
-             | You: 这里放入聚集可视化的类型，划分依据，比如SS、STA、R等
-             span(v-if='(4 <= step) && (step < 6)') &nbsp; S、T、A、R分别代表什么?
-          p(v-if='(6 <= step) && (step <= steps)') You: 还有什么图？
+             | 这里插入图片
+             span(v-if='(4 <= step) && (step < 6)') &nbsp; 就一张直接可视化的图
+          img(v-if='step === 5',src='./assets/zhijiekeshihua.png')
 
-          eg-transition(enter='lightSpeedIn')
-            #awesome-slideshow.embedded-slideshow-container(v-if='step >= 5')
-              awesome-embedded-slideshow(:embedded='true', :username='username',
-                                         :preference='preference')
+          p(v-if='(6 <= step) && (step < 9)')
+             | 这里可以让DP出场，介绍聚集可视化的概念和图片
+
           eg-transition(enter='slideInUp')
             p(v-if='(11 < step)  && (step <= 13)').
               这里可以放入特征可视化的类型、典型案例，图等
