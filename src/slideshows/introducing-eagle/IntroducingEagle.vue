@@ -59,9 +59,9 @@
           p(v-if="step >= 2")
             | 基于
             img(src='./assets/icons/shijian.svg' width='40px' height='40px')
-            |、
+            | |
             img(src='./assets/icons/kongjian.svg' width='50px' height='50px')
-            |、
+            | |
             img(src='./assets/icons/gongneng.svg' width='50px' height='50px')
             | 对数据做分析
         eg-transition(enter='bounceInRight' leave='bounceOutRight')
@@ -142,9 +142,9 @@
     vtfpourt4x(enter='flipInY', leave='hinge')
     vtfpourt5x(enter='flipInY', leave='hinge')
     //- vtfpourt6x(enter='flipInY', leave='hinge')
-    awesome-inserted-slide(:username='username', :preference='preference',
-                           enter='fadeIn', leave='hinge',
-                           :skip="!slideCategories['slideReuse'].show")
+    //- awesome-inserted-slide(:username='username', :preference='preference',
+    //-                        enter='fadeIn', leave='hinge',
+    //-                        :skip="!slideCategories['slideReuse'].show")
 
     //- figures-slide(enter='flipInY', leave='rollOut', :skip="['slideReuse', 'themes', 'interactivity'].some(function (e) {return slideCategories[e].show})")
 
