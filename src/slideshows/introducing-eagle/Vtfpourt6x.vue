@@ -39,7 +39,7 @@ import AwesomeEmbeddedSlideshow from './AwesomeEmbeddedSlideshow'
 import eagle from 'eagle.js'
 export default {
   props: {
-    steps: {default: 14},
+    steps: {default: 4},
     username: {default: 'Tracy'},
     preference: {default: 'baby bunnies'}
   },

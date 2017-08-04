@@ -67,7 +67,7 @@
         eg-transition(enter='bounceInRight' leave='bounceOutRight')
           p(v-if="step >= 3")
             | 将有一定 <b> 服务功能 </b> 的功能区分为以下八种
-            img(src='./assets/functional area.png' width='665px' height='600px')
+            img(src='./assets/functional area.png' width='400px' height='400px')
         eg-transition(enter='bounceInLeft' leave='bounceOutLeft')
           p(v-if="step >= 4")
             | 依据 关联、比重、次数、趋势、轨迹等关键词进行描述

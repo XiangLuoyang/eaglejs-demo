@@ -12,14 +12,13 @@ eg-transition(:enter='enter', :leave='leave')
           .center
             |基于三种方式：直接可视化、聚集可视化、特征可视化
           br
-          br
           eg-code-block(lang='html', v-if="step === 2").
             1. 这一整章的内容说的都是之前提到的关键词之一：轨迹
             2. 关于移动轨迹可视化的方式有很多。我们先分情况讨论有哪些作图环境和条件
             3. 讨论一下在不同的环境和条件下选用什么样的图
-
+          br
           eg-transition(enter='fadeIn')
-            img(v-if='step === 2',src='./assets/guijikeshihua.png' style='margin-left:150px')
+            img(v-if='step === 2',src='./assets/guijikeshihua.png' style='margin-left:100px')
       eg-transition(enter='bounceInRight')
         .subslide(v-if='(step >= 3) && (step < 15)')
           p(v-if='(3 <= step) && (step < 6)')
