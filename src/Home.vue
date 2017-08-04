@@ -3,13 +3,11 @@
   .content
     h1
       span.logo
-      span Eagle
-      span.grey .js
-    h2 A slideshow framework for hackers
+      span 可视
+      span.grey 化
+    br
+    h2 城市轨道交通客流出行
 
-
-    iframe.github-star(src="https://ghbtns.com/github-btn.html?user=zulko&repo=eagle.js&type=star&count=true&size=large"
-                       frameborder="0" scrolling="0" width="160px" height="30px")
     p.
       Eagle.js is a web-based slideshow framework for Vue.js.
       It supports animations, themes, interactive widgets (for web demos),

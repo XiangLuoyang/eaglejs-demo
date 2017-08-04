@@ -2,39 +2,30 @@
 eg-transition(:enter='enter', :leave='leave')
   .eg-slide(v-if='active')
     .eg-slide-content
-      h3(v-if='step < 12') 城市轨道交通网络客流分析可视化
+      h3(v-if='step < 12') 城市轨道交通客流类别可视化
       h3(v-else) Slideception !!
-
-
       eg-transition(leave='bounceOutLeft')
         .subslide(v-if='step <= 2')
           p.
           .center
-            |基于三个维度：类别、时间、空间
-          br
-          br
+            |两个大的方向和5个小的方向：正常出行；小众出行
+
           eg-code-block(lang='html', v-if="step === 2").
-            1. 轨道站点高峰小时内进站客流变化<b>趋势</b>折线图
-            2. 轨道典型站点客流进/出站<b>流量</b>金字塔图/漏斗图
-            3. 轨道站点日均客运量<b>比重</b>分布南丁格尔玫瑰图
-            4. 轨道站点<b>流量流向</b>分布和弦图
-            5. 各轨道线路日均进站量及日均客运量<b>排名</b>条状图
-            6. 轨道线路<b>客流OD</b>分布桑基图
-            7. 轨道站点日均<b>客流量</b>分布矩阵树图
-            8. 各行政区轨道进客站客流总量<b>排行榜</b>条状图
-            9. 各功能区轨道线路<b>流量极差</b>分布气泡图
+            1. 客流类别比例分布
+            2. 客流类别空间分布
+            3. 通勤出行可视化
+            4. 异常出行客流空间分布
 
           eg-transition(enter='fadeIn')
             p(v-if='step === 2').
-              这里是基于交通网络的类别，可以对轨道做出哪些分析
+              上面左边讲的是类别，右边可以放这些图是怎么选出来的过程
       eg-transition(enter='bounceInRight')
         .subslide(v-if='(step >= 4) && (step < 15)')
 
           p(v-if='(3 <= step) && (step < 6)')
-             | You: 这里放入像embedded slide 的图，图<i>不要</i>在公司里画，内容是画出上面几个类别划分依据的生成过程
+             | You: W这里放入像embedded slide 的图，图<i>不要</i>在公司里画，画出上面几个轨道站点图片的生成过程 ?
              span(v-if='(4 <= step) && (step < 6)') &nbsp; How is this slide <i>complex</i>?
-          p(v-if='(6 <= step) && (step <= steps-1)') You: 还有什么图？
-          p(v-if='step === steps') You: 以上是基于类别对轨道交通客流可视化做出了一定分析，接下来我们可以看看基于时间和空间，我们能对轨道交通客流做出那些处理
+          p(v-if='(6 <= step) && (step <= steps)') You: 还有什么图？
 
           eg-transition(enter='lightSpeedIn')
             #awesome-slideshow.embedded-slideshow-container(v-if='step >= 5')
