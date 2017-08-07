@@ -18,7 +18,7 @@ eg-transition(:enter='enter', :leave='leave')
           p.center And if you like plots, you can use awesome libraries like Chart.js
           .figure
             p.caption(v-html='title')
-            chart(:data='figureData(step)', :options='figureOptions', type='bar',
+            chart(:data='figureData(step)', :options='figureOptions', type='doughnut',
                   :height='250')
 </template>
 <script>
@@ -72,36 +72,57 @@ export default {
   },
   computed: {
     title: function () {
-      var line = 'Github stars of top slideshow frameworks - '
+      var line = '客流出行特征可视化'
       if (this.step <= 4) {
-        return line + 'March 2017'
+        return line + '——平均出行次数'
       } else {
-        return line + 'March 2018 projections'
+        return line + '——平均出行时间'
       }
     }
   },
   methods: {
     figureData: function (step) {
-      return {
-        labels: ['Reveal.JS', 'Impress.JS', 'Shower.JS', 'Eagle.JS'],
-        datasets: [{
-          label: 'Stars',
-          data: (step === 4 ? [33000, 31000, 3500, 1] : [55000, 47000, 11500, 95000]),
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)'
-          ],
-          borderColor: [
-            'rgba(255,99,132,1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
-          ],
-          borderWidth: 1
-        }]
-      }
+      return
+      [
+        {
+          value: 30,
+          color: '#F7464A'
+        },
+        {
+          value: 50,
+          color: '#E2EAE9'
+        },
+        {
+          value: 100,
+          color: '#D4CCC5'
+        },
+        {
+          value: 40,
+          color: '#949FB1'
+        },
+        {
+          value: 120,
+          color: '#4D5360'
+        }
+      ]
+        // labels: ['Reveal.JS', 'Impress.JS', 'Shower.JS', 'Eagle.JS'],
+        // datasets: [{
+        //   label: 'Stars',
+        //   data: (step === 4 ? [33000, 31000, 3500, 1] : [55000, 47000, 11500, 95000]),
+        //   backgroundColor: [
+        //     'rgba(255, 99, 132, 0.2)',
+        //     'rgba(255, 206, 86, 0.2)',
+        //     'rgba(153, 102, 255, 0.2)',
+        //     'rgba(255, 159, 64, 0.2)'
+        //   ],
+        //   borderColor: [
+        //     'rgba(255,99,132,1)',
+        //     'rgba(255, 206, 86, 1)',
+        //     'rgba(153, 102, 255, 1)',
+        //     'rgba(255, 159, 64, 1)'
+        //   ],
+        //   borderWidth: 1
+        // }]
     }
   },
   mixins: [eagle.slide]

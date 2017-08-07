@@ -25,14 +25,14 @@ eg-transition(:enter='enter', :leave='leave')
             img(v-if='step === 2',src='./assets/chuxingtezheng.png' style='margin-left:300px' width='300px' height='300px')
       eg-transition(enter='bounceInRight')
         .subslide(v-if='(step >= 3) && (step < 15)')
-          p(v-if='(3 <= step) && (step <= 4)')
-             |关于平均出行次数的描述
-          img(v-if='(4 <= step) && (step < 5)' src = '/static/fm.png')
-          p(v-if='(5 <= step) && (step < 6)')
-             |关于平均出行时间的描述
-          img(v-if='(5 <= step) && (step < 6)' src = '/static/fm.png')
-          p(v-if='(6 <= step) && (step <= 7)')
-             |关于平均出行距离的描述
+          p(style='margin-left:100px' v-if='(3 <= step) && (step <= 4)')
+             |关于特征关联的描述
+          img(style='margin-left:100px;width:720px;height:417px' v-if='(4 <= step) && (step < 5)' src = '/static/城市轨道交通客流出行特征关联可视化.png')
+          p(style='margin-left:100px' v-if='(5 <= step) && (step < 6)')
+             |关于平均出行特征的描述
+             |这里打算用3张环形图来表示
+          p(style='margin-left:100px' v-if='(6 <= step) && (step <= 7)')
+             |关于房价空间可视化的描述
           eg-transition(enter='slideInUp')
             p(v-if='(7 < step)  && (step <= 8)').
               If you lost track: you are watching a slideshow embedded
