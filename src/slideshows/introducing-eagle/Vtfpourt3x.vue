@@ -4,7 +4,8 @@ eg-transition(:enter='enter', :leave='leave')
     .eg-slide-content
       h3(v-if='step <= 3') 客流分析可视化
       h3(v-if='(step > 3) && (step <= 12)') 类别
-      h3(v-if='step > 12') 时间
+      h3(v-if='(step > 12) && (step <= 13)') 时间
+      h3(v-if='step > 13') 空间
 
 
       eg-transition(leave='bounceOutLeft')
@@ -35,9 +36,7 @@ eg-transition(:enter='enter', :leave='leave')
              | You:
              span(v-if='(4 <= step) && (step < 6)') &nbsp; 讲那么多，记不住有什么用?
           p(v-if='(6 <= step) && (step <= steps)' style='margin-left:20%') You: 然后呢？
-
-
-          eg-transition(enter='lightSpeedIn')
+          eg-transition(enter='fadeIn')
             #awesome-slideshow.embedded-slideshow-container(v-if='step >= 5')
               vtfpourt3xEmbedded(:embedded='true', :username='username',
                                          :preference='preference')
@@ -47,15 +46,22 @@ eg-transition(:enter='enter', :leave='leave')
               in a slideshow embedded in a slide inserted in a slideshow.
 
       eg-transition(enter='bounceInRight')
-        .subslide(v-if='(step >= 13) && (step < 15)')
-
-          p(v-if='(13 <= step) && (step < 16)' style='margin-left:20%')
+        .subslide(v-if='(step >= 13) && (step < 14)')
+          p(v-if='(13 <= step) && (step < 14)' style='margin-left:20%')
              | You:
-             span(v-if='(13 <= step) && (step < 16)') &nbsp; 那基于时间和空间呢
-
-          eg-transition(enter='lightSpeedIn')
-
-
+             span(v-if='(13 <= step) && (step < 14)') &nbsp; 那基于时间和空间呢
+          img(src='/static/轨道交通客流分析时间维度.png' style='margin-left:50px')
+        .subslide(v-if='(step >= 14) && (step < 16)')
+          p(v-if='(14 <= step) && (step < 15)' style='margin-left:20%')
+             | You:
+             span(v-if='(14 <= step) && (step < 15)') &nbsp; 那空间也想必差不多吧
+          eg-transition(enter='bounceInRight')
+            eg-code-block(lang='html').
+              1.轨道进站量与换乘量的空间比例分布
+              2.公共交通客流
+              3.轨道站点客流
+          br
+          img(src='/static/fm.png' style='margin-left:150px;width:600px;height:400px')
 </template>
 
 <script>
