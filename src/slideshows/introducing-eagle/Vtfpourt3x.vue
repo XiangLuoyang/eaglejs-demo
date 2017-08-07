@@ -2,8 +2,9 @@
 eg-transition(:enter='enter', :leave='leave')
   .eg-slide(v-if='active')
     .eg-slide-content
-      h3(v-if='step < 12') 客流分析可视化
-      h3(v-else) Slideception !!
+      h3(v-if='step <= 3') 客流分析可视化
+      h3(v-if='(step > 3) && (step <= 12)') 类别
+      h3(v-if='step > 12') 时间
 
 
       eg-transition(leave='bounceOutLeft')
@@ -28,22 +29,33 @@ eg-transition(:enter='enter', :leave='leave')
             p(v-if='step === 3').
               密密麻麻的字，正好体现了数据可视化的优点
       eg-transition(enter='bounceInRight')
-        .subslide(v-if='(step >= 4) && (step < 15)')
+        .subslide(v-if='(step >= 4) && (step < 13)')
 
           p(v-if='(3 <= step) && (step < 6)' style='margin-left:20%')
              | You:
              span(v-if='(4 <= step) && (step < 6)') &nbsp; 讲那么多，记不住有什么用?
-          p(v-if='(6 <= step) && (step <= steps-1)' style='margin-left:20%') You: 还有什么图？
-          p(v-if='step === steps' style='margin-left:20%') You: 以上是基于类别对轨道交通客流可视化做出了一定分析，接下来我们可以看看基于时间和空间，我们能对轨道交通客流做出那些处理
+          p(v-if='(6 <= step) && (step <= steps)' style='margin-left:20%') You: 然后呢？
+
 
           eg-transition(enter='lightSpeedIn')
             #awesome-slideshow.embedded-slideshow-container(v-if='step >= 5')
               vtfpourt3xEmbedded(:embedded='true', :username='username',
                                          :preference='preference')
           eg-transition(enter='slideInUp')
-            p(v-if='(11 < step)  && (step <= 13)').
+            p(v-if='(11 < step)  && (step <= 12)').
               If you lost track: you are watching a slideshow embedded
               in a slideshow embedded in a slide inserted in a slideshow.
+
+      eg-transition(enter='bounceInRight')
+        .subslide(v-if='(step >= 13) && (step < 15)')
+
+          p(v-if='(13 <= step) && (step < 16)' style='margin-left:20%')
+             | You:
+             span(v-if='(13 <= step) && (step < 16)') &nbsp; 那基于时间和空间呢
+
+          eg-transition(enter='lightSpeedIn')
+
+
 </template>
 
 <script>
