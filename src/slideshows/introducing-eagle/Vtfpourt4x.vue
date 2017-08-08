@@ -3,9 +3,9 @@ eg-transition(:enter='enter', :leave='leave')
   .eg-slide(v-if='active')
     .eg-slide-content
       h3(v-if='step <= 2') 移动轨迹可视化
-      h4(v-if='(step >=3)&&(step <=5)') 直接可视化
-      h4(v-if='(step >=6)&&(step <=15)') 聚集可视化
-      h4(v-if='step >=15') 特征可视化
+      h4.center(v-if='(step >=3)&&(step <=5)') 直接可视化
+      h4.center(v-if='(step >=6)&&(step <=15)') 聚集可视化
+      h4.center(v-if='step >=15') 特征可视化
       eg-transition(leave='bounceOutLeft')
         .subslide(v-if='step <= 2')
           p.
@@ -21,14 +21,14 @@ eg-transition(:enter='enter', :leave='leave')
             img(v-if='step === 2',src='./assets/guijikeshihua.png' style='margin-left:100px')
       eg-transition(enter='bounceInRight')
         .subslide(v-if='(step >= 3) && (step < 15)')
-          p(v-if='(3 <= step) && (step < 6)')
+          p.center(v-if='(3 <= step) && (step < 6)')
              | 直接可视化
              span(v-if='(4 <= step) && (step < 6)') &nbsp; 就很直接
-          img(v-if='step === 5',src='./assets/zhijiekeshihua.png')
+          img(style='margin-left:100px' v-if='step === 5',src='./assets/zhijiekeshihua.png')
 
-          p(v-if='(6 <= step) && (step < 9)')
+          p.center(v-if='(6 <= step) && (step < 9)')
              | 这里可以让DP出场，介绍聚集可视化的概念和图片
-          p(v-if='(9 <= step) && (step <= 15)')
+          p.center(v-if='(9 <= step) && (step <= 15)')
              | DP持续讲课时间
 
           eg-transition(enter='lightSpeedIn')
