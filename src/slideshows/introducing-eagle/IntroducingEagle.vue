@@ -70,95 +70,21 @@
           p(v-if="step >= 4")
             | 过程 = (正确的描述) => 合理的制图
 
-    //- slide(:steps=1, leave='fadeOut')
-    //-   eg-transition(enter='flipInX')
-    //-     h3 接上面，这张讲基于时间维度的画图方式，有那些图要做。
-
-    //-   eg-transition(enter='flipInX')
-    //-     p 分成两张ppt写出关键词为时间的图可以有哪些选项，什么情况下用什么图
-
-    //-   eg-transition(enter='flipInX')
-    //-     eg-code-block(lang='html').
-    //-       1. 在基于时间的情况下什么情况下用什么图
-
-    //- slide(:steps=1, leave='fadeOut')
-    //-   eg-transition(enter='flipInX')
-    //-     h3 接上面，这张讲基于空间维度的画图方式，有那些图要做。
-
-    //-   eg-transition(enter='flipInX')
-    //-     p 分成两张ppt写出关键词为空间的图可以有哪些选项，什么情况下用什么图
-
-    //-   eg-transition(enter='flipInX')
-    //-     eg-code-block(lang='html').
-    //-       1. 在基于空间的情况下什么情况下用什么图
-
-    //- slide.boredYet(enter='fadeIn', :mouseNavigation='false', :keyboardNavigation='false')
-    //-   h3 Bored yet ?
-    //-   .center
-    //-     p What shall I call you ?
-    //-     input.center(v-model='username')
-    //-     p.
-    //-       {{ username }}<span v-if='username.length'>,</span> I got you.
-    //-       Tell me what you like, I'll skip the rest:
-
-    //-     .inline(v-for='category, name in slideCategories')
-    //-         eg-toggle(:key='name', v-model='category.show', :width='30',
-    //-                   on-text='', off-text='', on-color='#ffeeaa',
-    //-                   @change='changeMessage(category.changeMessage)')
-    //-           p.label {{ category.name }}
-    //-           eg-triggered-message(:trigger='!category.show',
-    //-                               :duration='3', position='top right',
-    //-                               enter='bounceInRight', leave='bounceOutRight')
-    //-             p(v-html="message(category.name)")
-
-    //-   .center
-    //-     p What's your favourite ?
-    //-     eg-radio.inline(v-for='pref in preferences', v-model="preference",
-    //-                     :label="pref.label" )
-    //-       p {{ pref.text}}
-    //-       eg-triggered-message(:trigger='preference=== pref.label',
-    //-                           :duration='3', position='top right',
-    //-                           enter='bounceInRight', leave='bounceOutRight')
-    //-                       p {{ message(pref.label) }}
-
-    //-   .button.prev(@click.stop='previousSlide')
-    //-     span &lt; Prev. slide
-    //-     br
-    //-     span.small  Ctrl + left
-    //-   .button.next(@click.stop='nextSlide')
-    //-     span Next slide &gt;
-    //-     br
-    //-     span.small Ctrl + right
-
-
-
-    //- themes-slideshow(:skip="!slideCategories.themes.show", :inserted='true', firstSlide=3)
     vtfpourt3x(enter='flipInY', leave='flipOutY')
     vtfpourt4x(enter='bounceInRight', leave='bounceOutRight')
     vtfpourt5x(enter='flipInX', leave='flipOutX')
     vtfpourt6x(enter='bounceInLeft', leave='bounceOutLeft')
-    //- awesome-inserted-slide(:username='username', :preference='preference',
-    //-                        enter='fadeIn', leave='hinge',
-    //-                        :skip="!slideCategories['slideReuse'].show")
-
-    //- figures-slide(enter='flipInY', leave='rollOut', :skip="['slideReuse', 'themes', 'interactivity'].some(function (e) {return slideCategories[e].show})")
-
-
 
     slide(enter='zoomIn', leave='fadeOut')
-      h3 That's all folks !
+      h3 That's all!
       p.center Think you can help ?
       .center
         img.computerkid.shadowbox(src='http://i.imgur.com/AAlntwU.gif')
       p.center.
-        I'm not a frontend person, so everyone<br />
-        is welcome to contribute to <a href="https://github.com/Zulko/eagle.js" target='_blank'> the repo</a>.
-
+        chaosx@yeah.net
 
     slide(enter='fadeIn')
       h3 Thank you !
-      p This slideshow's so fresh, it has end credits.
-      end-credits(:username='username')
 </template>
 
 <script>

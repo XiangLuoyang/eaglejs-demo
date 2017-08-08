@@ -47,21 +47,23 @@ eg-transition(:enter='enter', :leave='leave')
 
       eg-transition(enter='bounceInRight')
         .subslide(v-if='(step >= 13) && (step < 14)')
-          p(v-if='(13 <= step) && (step < 14)' style='margin-left:20%')
+          p.center(v-if='(13 <= step) && (step < 14)')
              | You:
              span(v-if='(13 <= step) && (step < 14)') &nbsp; 那基于时间和空间呢
-          img(src='/static/轨道交通客流分析时间维度.png' style='margin-left:50px')
+          .center
+            img(src='/static/轨道交通客流分析时间维度.png')
         .subslide(v-if='(step >= 14) && (step < 16)')
-          p(v-if='(14 <= step) && (step < 15)' style='margin-left:20%')
+          p.center(v-if='(14 <= step) && (step < 15)')
              | You:
              span(v-if='(14 <= step) && (step < 15)') &nbsp; 那空间也想必差不多吧
-          eg-transition(enter='bounceInRight')
+          eg-transition(enter='bounceInLeft')
             eg-code-block(lang='html').
               1.轨道进站量与换乘量的空间比例分布
               2.公共交通客流
               3.轨道站点客流
           br
-          img(src='/static/fm.png' style='margin-left:150px;width:600px;height:400px')
+          .center
+            img(src='/static/fm.png' style='width:600px;height:400px')
 </template>
 
 <script>

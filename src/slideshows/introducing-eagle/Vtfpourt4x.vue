@@ -4,7 +4,7 @@ eg-transition(:enter='enter', :leave='leave')
     .eg-slide-content
       h3(v-if='step <= 2') 移动轨迹可视化
       h4.center(v-if='(step >=3)&&(step <=5)') 直接可视化
-      h4.center(v-if='(step >=6)&&(step <=15)') 聚集可视化
+      h4.center(v-if='(step >=6)&&(step <15)') 聚集可视化
       h4.center(v-if='step >=15') 特征可视化
       eg-transition(leave='bounceOutLeft')
         .subslide(v-if='step <= 2')
@@ -19,7 +19,7 @@ eg-transition(:enter='enter', :leave='leave')
           br
           eg-transition(enter='fadeIn')
             img(v-if='step === 2',src='./assets/guijikeshihua.png' style='margin-left:100px')
-      eg-transition(enter='bounceInRight')
+      eg-transition(enter='bounceInLeft')
         .subslide(v-if='(step >= 3) && (step < 15)')
           p.center(v-if='(3 <= step) && (step < 6)')
              | 直接可视化
@@ -31,15 +31,21 @@ eg-transition(:enter='enter', :leave='leave')
           p.center(v-if='(9 <= step) && (step <= 15)')
              | DP持续讲课时间
 
-          eg-transition(enter='lightSpeedIn')
+          eg-transition(enter='flipInX')
             #awesome-slideshow.embedded-slideshow-container(v-if='step >= 6')
               vtfpourt4xEmbedded(:embedded='true', :username='username',
                                          :preference='preference')
 
           eg-transition(enter='slideInUp')
-            p(v-if='(11 < step)  && (step <= 15)').
-              把上面那些兔子啊什么的换成雷达图什么的谢谢
+            p.center(v-if='step === 14').
+              聚集可视化就到这里谢谢
 
+      eg-transition(enter='bounceInRight')
+        .subslide(v-if='step === 15')
+          p.center(v-if='step === 15')
+             | 特征可视化
+             span(v-if='step === 15') &nbsp; 也很直接
+          img(style='margin-left:100px' v-if='step === 15',src='/static/特征可视化.png')
 </template>
 
 <script>
@@ -47,7 +53,7 @@ import Vtfpourt4xEmbedded from './Vtfpourt4xEmbedded'
 import eagle from 'eagle.js'
 export default {
   props: {
-    steps: {default: 14},
+    steps: {default: 15},
     username: {default: 'Tracy'},
     preference: {default: 'baby bunnies'}
   },
