@@ -13,8 +13,6 @@
           img.control-schema(src='./assets/controlsNext.svg')
           p Previous:
           img.control-schema(src='./assets/controlsPrev.svg')
-    //- 插入图表的ppt
-    figures-slide(:inserted='true')
     slide(:steps=5, enter='bounceInRight' leave='bounceOutDown')
       h3
         | 提纲

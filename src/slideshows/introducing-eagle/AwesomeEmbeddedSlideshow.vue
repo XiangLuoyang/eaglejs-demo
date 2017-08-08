@@ -1,25 +1,7 @@
 <template lang="pug">
 #AwesomeEmbeddedSlideshow
   .eg-slideshow
-    slide(enter='fadeIn' leave='fadeOut').slide-intro
-      eg-transition(enter='bounceInRight' leave='bounceOutLeft')
-        h3 Oh hi there, <br />{{ username }} who likes {{ preference }}
-
-    slide(:steps='2', enter='fadeIn' leave='fadeOut').slide-two
-      eg-transition(enter='bounceInLeft' leave='bounceOutRight')
-        .div
-          h3 Hope you like it so far.
-          h4 By the way, dope theme, Zulko.
-      eg-transition(enter='slideInRight' leave='slideOutRight')
-          p.thanks(v-if='step === 2') Thanks mate. Big fan.
-
-    slide(enter='fadeIn' leave='fadeOut').slide-three
-      eg-transition(enter='bounceInLeft' leave='bounceOutRight')
-        h3 Now {{ username }}, <br />see anything you like ?
-
-    slide(enter='fadeIn' leave='fadeOut').slide-four
-      eg-transition(enter='bounceInLeft' leave='bounceOutRight')
-        h4 "OMG AN <b>EMBEDDED</b> SLIDESHOW I'M DYING <br /> I'VE NEVER SEEN ONE BEFORE <br /> BECAUSE I LIVE UNDER A ROCK"
+    figures-slide(:inserted='true' leave='fadeOut')
 
     slide(:steps='4').slide-five
       eg-transition(leave='fadeOut')
@@ -75,7 +57,8 @@ export default {
     path: 'deadpool'
   },
   components: {
-    'example-image-slideshow': ExampleImageSlideshow
+    'example-image-slideshow': ExampleImageSlideshow,
+    'figures-slide': require('./FiguresSlide')
   }
 }
 </script>
@@ -108,7 +91,6 @@ export default {
       background-repeat: no-repeat;
       background-color: white;
     }
-
     .slide-intro {
       background-image: url('http://i.imgur.com/ZLT46UN.jpg');
       background-position: center bottom;
