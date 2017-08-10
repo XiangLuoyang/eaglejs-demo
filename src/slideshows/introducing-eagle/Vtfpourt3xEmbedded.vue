@@ -17,7 +17,7 @@
       eg-transition(enter='bounceInLeft' leave='bounceOutRight')
         h3 对于一条轨道 <br />有以下两个活动
       eg-transition(enter='fadeIn' leave='fadeOut')
-          p.thanks(v-if='step === 2') 别忘了还可以加上时间这个变量
+          p.thanks(v-if='step === 2') 还可以加上时间这个变量
 
     slide(enter='fadeIn' leave='fadeOut').slide-four
       eg-transition(enter='bounceInLeft' leave='bounceOutRight')

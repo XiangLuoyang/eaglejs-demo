@@ -9,8 +9,8 @@ eg-transition(:enter='enter', :leave='leave')
           p.center(v-if='step === 1')
             |依据K-means聚类的客流类别划分
           p.center(v-if='step === 2')
-            |两个大的方向和5个小的方向：正常出行；小众出行
-          eg-transition(enter='bounceInLeft' leave='bounceOutLeft')
+            |2个大的方向和5个小的方向：正常出行/小众出行
+          eg-transition(enter='bounceInDown' leave='bounceOutUp')
             eg-code-block(lang='html', v-if="step === 2").
               1. 客流类别比例分布
               2. 客流类别空间分布
@@ -25,7 +25,7 @@ eg-transition(:enter='enter', :leave='leave')
         .subslide(v-if='(step >= 4) && (step < 15)')
 
           p(v-if='(3 <= step) && (step < 6)')
-             | You: 这不就又回到了之前说到的
+             | You: 这不就回到了之前说的
              span(v-if='(4 <= step) && (step < 6)') &nbsp; 依据关键词选择作图方式?
           .center
             img.computerkid.shadowbox(style='height:580px' src='static/轨道交通客流类别可视化.png')

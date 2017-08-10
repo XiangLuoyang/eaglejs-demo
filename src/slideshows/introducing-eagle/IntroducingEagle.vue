@@ -51,11 +51,11 @@
 
 
     slide(:steps=4, enter='bounceInDown')
-      h3 如何描述
-
+      h3.center 如何描述
+      br
       .center
         eg-transition(enter='bounceInLeft' leave='bounceOutLeft')
-          p(v-if="step >= 2")
+          p.center(v-if="step >= 2")
             | 基于
             img(src='./assets/icons/shijian.svg' width='40px' height='40px')
             | |
@@ -63,11 +63,13 @@
             | |
             img(src='./assets/icons/gongneng.svg' width='50px' height='50px')
             | 三个维度对数据进行描述
+        br
         eg-transition(enter='bounceInRight' leave='bounceOutLeft')
-          p(v-if="step >= 3")
+          p.center(v-if="step >= 3")
             | 依据 关联、比重、次数、趋势、轨迹等关键词进行描述
+        br
         eg-transition(enter='bounceInLeft' leave='bounceOutRight')
-          p(v-if="step >= 4")
+          p.center(v-if="step >= 4")
             | 过程 = (正确的描述) => 合理的制图
 
     vtfpourt3x(enter='flipInY', leave='flipOutY')
@@ -169,6 +171,15 @@ export default {
 <style lang='scss'>
 @import 'node_modules/eagle.js/src/themes/agrume/agrume';
 #IntroducingEagle {
+  h3 {
+    font-family: '微软雅黑';
+  }
+  h4 {
+    font-family: 'Pompiere','微软雅黑';
+  }
+  p {
+    font-family: 'Pompiere','微软雅黑';
+  }
   .frontpage {
     img {
       height: 7em;

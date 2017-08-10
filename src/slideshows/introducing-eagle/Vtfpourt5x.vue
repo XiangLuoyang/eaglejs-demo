@@ -20,13 +20,13 @@ eg-transition(:enter='enter', :leave='leave')
           br
           eg-transition(enter='fadeIn')
             .center
-              img(v-if='step <= 2',src='./assets/chuxingtezheng.png' width='300px' height='300px')
+              img.shadowbox(v-if='step <= 2',src='./assets/chuxingtezheng.png' width='300px' height='300px')
       eg-transition(enter='bounceInRight')
         .subslide(v-if='(step >= 3) && (step < 8)')
           p.center(v-if='(3 <= step) && (step <= 4)')
              |关于特征关联的描述
           .center
-            img(style='width:720px;height:417px' v-if='(4 <= step) && (step < 5)' src = '/static/城市轨道交通客流出行特征关联可视化.png')
+            img.shadowbox(style='width:720px;height:417px' v-if='(4 <= step) && (step < 5)' src = '/static/城市轨道交通客流出行特征关联可视化.png')
           p.center(v-if='(5 <= step) && (step < 8)')
              |关于平均出行特征的描述
           //- 插入图表的ppt
@@ -39,7 +39,7 @@ eg-transition(:enter='enter', :leave='leave')
           p.center(v-if='step >= 8')
             |关于房价空间可视化的描述
           .center
-            img(style='width:720px;height:417px' v-if='step === 8' src = '/static/城市区域热力图.jpg')
+            img.shadowbox(style='width:720px;height:417px' v-if='step === 8' src = '/static/城市区域热力图.jpg')
 </template>
 
 <script>

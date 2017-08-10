@@ -51,7 +51,7 @@ eg-transition(:enter='enter', :leave='leave')
              | You:
              span(v-if='(13 <= step) && (step < 14)') &nbsp; 那基于时间和空间呢
           .center
-            img(src='/static/轨道交通客流分析时间维度.png')
+            img.shadowbox(src='/static/轨道交通客流分析时间维度.png')
         .subslide(v-if='(step >= 14) && (step < 16)')
           p.center(v-if='(14 <= step) && (step < 15)')
              | You:
@@ -63,7 +63,7 @@ eg-transition(:enter='enter', :leave='leave')
               3.轨道站点客流
           br
           .center
-            img(src='/static/fm.png' style='width:600px;height:400px')
+            img.shadowbox(src='/static/fm.png' style='width:600px;height:400px')
 </template>
 
 <script>
