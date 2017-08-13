@@ -18,13 +18,15 @@ eg-transition(:enter='enter', :leave='leave')
             3. 讨论一下在不同的环境和条件下选用什么样的图
           br
           eg-transition(enter='fadeIn')
-            img.shadowbox(v-if='step === 2',src='./assets/guijikeshihua.png' style='margin-left:100px')
+            .center
+              img.shadowbox(v-if='step === 2',src='./assets/guijikeshihua.png')
       eg-transition(enter='bounceInLeft')
         .subslide(v-if='(step >= 3) && (step < 15)')
           p.center(v-if='(3 <= step) && (step < 6)')
              | 直接可视化
              span(v-if='(4 <= step) && (step < 6)') &nbsp; 就很直接
-          img.shadowbox(style='margin-left:100px' v-if='step === 5',src='./assets/zhijiekeshihua.png')
+          .center
+            img.shadowbox(v-if='step === 5',src='./assets/zhijiekeshihua.png')
 
           p.center(v-if='(6 <= step) && (step < 9)')
              | 这里可以让DP出场，介绍聚集可视化的概念和图片

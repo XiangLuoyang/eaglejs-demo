@@ -30,6 +30,9 @@
           h3(v-if='step===2') 而我现在要说的聚集可视化
           h3(v-if='step===3') 就是把这个看上去不专业的表格
           h3(v-if='step===4') 转化成专业的图表
+
+          #ImageSlideshow.embedded-slideshow-container
+            example-image-slideshow(:embedded='true', :preference='preference')
 </template>
 
 <script>

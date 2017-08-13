@@ -71,10 +71,13 @@
         eg-transition(enter='bounceInLeft' leave='bounceOutRight')
           p.center(v-if="step >= 4")
             | 过程 = (正确的描述) => 合理的制图
-
+    //- addIn1(:skip="!slideCategories.themes.show", :inserted='true', firstSlide=3)
     vtfpourt3x(enter='flipInY', leave='flipOutY')
+    //- addIn2(:skip="!slideCategories.themes.show", :inserted='true', firstSlide=3)
     vtfpourt4x(enter='bounceInRight', leave='bounceOutRight')
+    //- addIn3(:skip="!slideCategories.themes.show", :inserted='true', firstSlide=3)
     vtfpourt5x(enter='flipInX', leave='flipOutX')
+    //- addIn4(:skip="!slideCategories.themes.show", :inserted='true', firstSlide=3)
     vtfpourt6x(enter='bounceInLeft', leave='bounceOutLeft')
 
     slide(enter='zoomIn', leave='fadeOut')
@@ -107,7 +110,11 @@ export default {
     'awesome-inserted-slide': require('./AwesomeInsertedSlide'),
     'figures-slide': require('./FiguresSlide'),
     'end-credits': require('./components/EndCredits'),
-    'themes-slideshow': require('../themes-slideshow/ThemesSlideshow')
+    // 'themes-slideshow': require('../themes-slideshow/ThemesSlideshow'),
+    'addIn1': require('../addIn1/ThemesSlideshow'),
+    'addIn2': require('../addIn2/ThemesSlideshow'),
+    'addIn3': require('../addIn3/ThemesSlideshow'),
+    'addIn4': require('../addIn4/ThemesSlideshow')
   },
   data: function () {
     return {

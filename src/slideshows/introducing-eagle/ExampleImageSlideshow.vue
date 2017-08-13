@@ -16,8 +16,8 @@ export default {
     var images = {
       'baby bunnies': [
         'http://i.imgur.com/1PL2k1H.jpg',
-        'http://i.imgur.com/GfFUcPQ.jpg',
-        'http://i.imgur.com/et8w8Rn.gif'
+        '/static/特征化1.png',
+        '/static/特征化2.png'
       ],
       'funny kitties': [
         'https://i.imgur.com/P7iyH.png',
