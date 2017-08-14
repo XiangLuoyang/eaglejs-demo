@@ -15,7 +15,7 @@ export default {
   data: function () {
     var images = {
       'baby bunnies': [
-        'http://i.imgur.com/1PL2k1H.jpg',
+        '/static/聚集可视化.png',
         '/static/特征化1.png',
         '/static/特征化2.png'
       ],
